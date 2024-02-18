@@ -295,7 +295,7 @@ Login
 .login__btn::after {
   position: absolute;
   content: "";
-  background: url(./img/login_icon.png) no-repeat center center/contain;
+  background: url(/img/login_icon.png) no-repeat center center/contain;
   width: 24px;
   height: 24px;
   right: 40px;
@@ -576,7 +576,7 @@ list
 .header__menu--links::before {
   position: absolute;
   content: "";
-  background: url(./img/pageicon.png) no-repeat center center/contain;
+  background: url(/img/pageicon.png) no-repeat center center/contain;
   width: 20px;
   height: 20px;
   top: 50%;
@@ -911,7 +911,7 @@ input[type=date] {
 .search__btn::before {
   position: absolute;
   content: "";
-  background: url(./img/checkicon.png) no-repeat center center/contain;
+  background: url(/img/checkicon.png) no-repeat center center/contain;
   width: 20px;
   height: 20px;
   top: 50%;
@@ -1010,7 +1010,7 @@ input[type=date] {
 .output__btn::before {
   position: absolute;
   content: "";
-  background: url(./img/downloadicon.png) no-repeat center center/contain;
+  background: url(/img/downloadicon.png) no-repeat center center/contain;
   width: 16px;
   height: 16px;
   top: 50%;
@@ -1158,7 +1158,7 @@ th {
 .pagination__prev::after {
   content: "";
   position: absolute;
-  background: url(./img/icon-left@2x.png) no-repeat center center/contain;
+  background: url(/img/icon-left@2x.png) no-repeat center center/contain;
   width: 6px;
   height: 11px;
 }
@@ -1246,7 +1246,7 @@ th {
 .pagination__next::after {
   content: "";
   position: absolute;
-  background: url(./img/icon-right@2x.png) no-repeat center center/contain;
+  background: url(/img/icon-right@2x.png) no-repeat center center/contain;
   width: 6px;
   height: 11px;
 }
@@ -1327,7 +1327,7 @@ detali
 .register__btn-typeA::before {
   position: absolute;
   content: "";
-  background: url(./img/back\ Icon.png) no-repeat center center/contain;
+  background: url(/img/back\ Icon.png) no-repeat center center/contain;
 }
 
 .register__btn-typeB {
@@ -1338,5 +1338,5 @@ detali
 .register__btn-typeB::before {
   position: absolute;
   content: "";
-  background: url(./img/keep\ Icon.png) no-repeat center center/contain;
+  background: url(/img/keep\ Icon.png) no-repeat center center/contain;
 }
