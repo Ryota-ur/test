@@ -788,6 +788,13 @@ list
     font-size: 11px;
   }
 }
+@media screen and (max-width: 767px) {
+  .search__input--box select {
+    height: 30px;
+    background: #fff;
+  }
+}
+
 .search__input--text {
   font-size: 14px;
   font-weight: 700;
@@ -834,6 +841,8 @@ list
 @media screen and (max-width: 767px) {
   .search__calendar--wrap [type=date] {
     padding: 4px;
+    height: 30px;
+    background: #fff;
   }
 }
 
