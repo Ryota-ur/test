@@ -4,6 +4,7 @@ const btn = document.querySelector('.drawer-icon');
 const content = document.querySelector('.drawer-content');
 const drawerBg = document.querySelector('.drawer-background');
 const contentLink = document.querySelectorAll('.drawer-content__link');
+const drawerLink = document.querySelector('.drawer-logo--link');
 
 btn.addEventListener('click', () => {
     btn.classList.toggle('open');
@@ -24,6 +25,12 @@ drawerBg.addEventListener('click', () => {
             drawerBg.classList.remove('overlay');
         });
     });
+
+    drawerLink.addEventListener('click', () => {
+        btn.classList.remove('open');
+        content.classList.remove('slide');
+        drawerBg.classList.remove('overlay');
+        });
 
 
 // スムーススクロール
