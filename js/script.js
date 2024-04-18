@@ -3,6 +3,7 @@ new WOW().init();
 const btn = document.querySelector('.drawer-icon');
 const content = document.querySelector('.drawer-content');
 const drawerBg = document.querySelector('.drawer-background');
+const contentLink = document.querySelectorAll('.drawer-content__link');
 
 btn.addEventListener('click', () => {
     btn.classList.toggle('open');
@@ -14,6 +15,14 @@ drawerBg.addEventListener('click', () => {
     btn.classList.remove('open');
     content.classList.remove('slide');
     drawerBg.classList.remove('overlay');
+    });
+
+    contentLink.forEach(link => {
+        link.addEventListener('click', () => {
+            btn.classList.remove('open');
+            content.classList.remove('slide');
+            drawerBg.classList.remove('overlay');
+        });
     });
 
 
