@@ -914,6 +914,16 @@ body {
   }
 }
 
+.company-row__right span {
+  font-size: 12px;
+}
+@media screen and (max-width: 767px) {
+  .company-row__right span {
+    font-size: 10px;
+  }
+}
+
+
 /*======================================
 # contact
 ===================================== */
