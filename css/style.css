@@ -633,7 +633,7 @@ a {
   color: var(--red);
 }
 .p-news__link::after {
-  background: url(./img/top/icon-arrow-black.png) no-repeat center center/contain;
+  background: url(../img/top/icon-arrow-black.png) no-repeat center center/contain;
   content: "";
   height: 2rem;
   left: 0rem;
@@ -650,7 +650,7 @@ a {
   }
 }
 .p-news__link:hover::after {
-  background: url(./img/top/icon-arrow-blue-btn.png) no-repeat center center/contain;
+  background: url(../img/top/icon-arrow-blue-btn.png) no-repeat center center/contain;
   left: 2rem;
 }
 @media (max-width: 766px) {
