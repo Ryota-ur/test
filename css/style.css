@@ -86,6 +86,7 @@ a {
   --antiqueWhite:#FAEBD7;
   --red:#FF0000;
   --whiteblue:#def7fa;
+  --green:#03A093;
   --mincho: "Hiragino Mincho ProN", YuMincho, serif;
   --gothic: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3","メイリオ", "Meiryo", sans-serif;
 }
@@ -191,8 +192,8 @@ a {
 }
 .l-footer__copyright p {
   color: var(--white);
-  font-size: 1.4rem;
-  padding: 2rem 0;
+  font-size: clamp(1rem, 1.4vw, 1.4rem);
+  padding: 2rem 0.5rem;
   text-align: center;
 }
 
@@ -385,11 +386,11 @@ a {
 .l-mainVisual.swiper-slide {
   position: relative;
 }
-.l-mainVisual__img {
+.l-mainVisual__img, .l-mainVisual__img--fixed {
   overflow: hidden;
   position: relative;
 }
-.l-mainVisual__img img {
+.l-mainVisual__img img, .l-mainVisual__img--fixed img {
   height: 80rem;
   max-width: 100%;
   width: 100%;
@@ -398,9 +399,12 @@ a {
      object-fit: cover;
 }
 @media (max-width: 766px) {
-  .l-mainVisual__img img {
+  .l-mainVisual__img img, .l-mainVisual__img--fixed img {
     height: 60rem;
   }
+}
+.l-mainVisual__img--fixed img {
+  animation: none;
 }
 @keyframes zoomUp {
   0% {
@@ -434,9 +438,6 @@ a {
   font-weight: bold;
 }
 
-.p-clinicMenu__headingWrap {
-  text-align: center;
-}
 .p-clinicMenu__list, .p-clinicMenu__listSmall {
   display: grid;
   gap: clamp(2rem, 3vw, 4rem);
@@ -556,53 +557,148 @@ a {
   margin-top: 0.8rem;
 }
 
-.p-greeting__body {
+.p-section__headingWrap {
+  text-align: center;
+}
+.p-section__parts, .p-section__parts--aiStart, .p-section__parts--mbLarge, .p-section__parts--mtSmall, .p-section__parts--spRerverse, .p-section__parts--reverse {
   align-items: center;
   display: flex;
-  margin-top: clamp(4rem, 8vw, 8rem);
+  margin-top: clamp(4rem, 10vw, 10rem);
 }
 @media (max-width: 766px) {
-  .p-greeting__body {
+  .p-section__parts, .p-section__parts--aiStart, .p-section__parts--mbLarge, .p-section__parts--mtSmall, .p-section__parts--spRerverse, .p-section__parts--reverse {
     flex-direction: column-reverse;
   }
 }
-.p-greeting__img {
+.p-section__parts--reverse {
+  flex-direction: row-reverse;
+}
+@media (max-width: 766px) {
+  .p-section__parts--reverse {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 766px) {
+  .p-section__parts--spRerverse {
+    flex-direction: column;
+  }
+}
+.p-section__parts--mtSmall {
+  margin-top: clamp(2rem, 4vw, 4rem);
+}
+.p-section__parts--mbLarge {
+  margin-bottom: clamp(4rem, 10vw, 10rem);
+}
+.p-section__parts--aiStart {
+  align-items: flex-start;
+}
+.p-section__img, .p-section__img--small {
   width: 45%;
 }
 @media (max-width: 766px) {
-  .p-greeting__img {
+  .p-section__img, .p-section__img--small {
     text-align: center;
     width: 100%;
   }
 }
-.p-greeting__img img {
+.p-section__img img, .p-section__img--small img {
   height: auto;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.p-greeting__content {
+.p-section__img--small {
+  width: 30%;
+}
+@media (max-width: 766px) {
+  .p-section__img--small {
+    text-align: center;
+    width: 100%;
+  }
+}
+.p-section__content, .p-section__content--block, .p-section__content--large, .p-section__content--largeReverse {
   padding-right: clamp(3rem, 4vw, 4rem);
   width: 55%;
 }
 @media (max-width: 766px) {
-  .p-greeting__content {
+  .p-section__content, .p-section__content--block, .p-section__content--large, .p-section__content--largeReverse {
     margin-top: 2.4rem;
     padding-right: 0rem;
     width: 100%;
   }
 }
-.p-greeting__text {
+.p-section__content--largeReverse {
+  padding-left: clamp(3rem, 4vw, 4rem);
+  width: 70%;
+}
+@media (max-width: 766px) {
+  .p-section__content--largeReverse {
+    margin-top: 2.4rem;
+    padding-left: 0rem;
+    width: 100%;
+  }
+}
+.p-section__content--large {
+  width: 70%;
+}
+@media (max-width: 766px) {
+  .p-section__content--large {
+    margin-top: 2.4rem;
+    padding-right: 0rem;
+    width: 100%;
+  }
+}
+.p-section__content--block {
+  padding-right: 0rem;
+  width: 100%;
+}
+.p-section__subHeading, .p-section__subHeading--large {
+  font-size: clamp(1.8rem, 2vw, 2.4rem);
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 2.4rem;
+}
+.p-section__subHeading--large {
+  font-size: clamp(2rem, 2.8vw, 2.8rem);
+}
+@media (max-width: 766px) {
+  .p-section__subHeading--large {
+    text-align: left;
+  }
+}
+.p-section__tertiaryHeading, .p-section__tertiaryHeading--mbNone {
+  font-size: clamp(1.6rem, 2vw, 2rem);
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 2.4rem;
+}
+.p-section__tertiaryHeading--mbNone {
+  margin-bottom: 0;
+}
+.p-section__textWrap, .p-section__textWrap--pb {
+  margin-top: 4rem;
+}
+.p-section__textWrap--pb {
+  padding-bottom: clamp(2rem, 4vw, 4rem);
+}
+.p-section__text {
   font-size: clamp(1.4rem, 1.8vw, 1.8rem);
   line-height: 1.88;
 }
-.p-greeting__ceoSignature {
+.p-section__ceoSignature {
   margin-top: 4.4rem;
   text-align: right;
 }
-.p-greeting__ceoName {
+.p-section__ceoName {
   font-size: clamp(1.2rem, 1.4vw, 1.4rem);
   line-height: 2;
+}
+.p-section__item {
+  margin-top: clamp(2rem, 2vw, 4rem);
+}
+.p-section__item p {
+  font-size: clamp(1.4rem, 1.8vw, 1.8rem);
+  line-height: 1.88;
 }
 
 .p-news__list {
@@ -682,6 +778,65 @@ a {
 @media (max-width: 576px) {
   .p-access__map iframe {
     height: 30rem;
+  }
+}
+.p-access__btnWrap {
+  margin-top: 4rem;
+  text-align: center;
+}
+.p-access__btn {
+  background: var(--green);
+  border: 0.1rem solid var(--green);
+  border-radius: 3rem;
+  color: var(--white);
+  cursor: pointer;
+  font-size: clamp(1.4rem, 1.6vw, 1.6rem);
+  font-weight: bold;
+  max-width: 40rem;
+  padding: 2rem;
+  transition: all 0.3s;
+  width: 100%;
+}
+.p-access__btn:hover {
+  background: var(--white);
+  color: var(--green);
+}
+.p-access__address {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+}
+.p-access__content {
+  align-items: center;
+  display: flex;
+  font-size: clamp(1.2rem, 1.4vw, 1.4rem);
+  gap: clamp(2rem, 4vw, 4rem);
+}
+.p-access__content:last-of-type {
+  align-items: start;
+  margin-top: 2rem;
+}
+@media (max-width: 766px) {
+  .p-access__content {
+    display: block;
+  }
+}
+.p-access__title {
+  font-size: clamp(1.6rem, 1.8vw, 1.8rem);
+  line-height: 1.5;
+}
+@media (max-width: 766px) {
+  .p-access__title {
+    text-align: center;
+  }
+}
+.p-access__list {
+  line-height: 1.8;
+}
+@media (max-width: 766px) {
+  .p-access__list {
+    margin-top: 1.5rem;
   }
 }
 
@@ -944,6 +1099,65 @@ a {
   padding-left: 5rem;
 }
 
+.p-career__inner {
+  align-items: start;
+  display: flex;
+  gap: clamp(4rem, 10vw, 10rem);
+  justify-content: center;
+}
+@media (max-width: 766px) {
+  .p-career__inner {
+    display: block;
+  }
+}
+@media (max-width: 766px) {
+  .p-career__content:last-of-type {
+    margin-top: 4rem;
+  }
+}
+.p-career__heading {
+  font-size: clamp(2rem, 2.8vw, 2.8rem);
+  font-weight: bold;
+}
+@media (max-width: 766px) {
+  .p-career__heading {
+    text-align: center;
+  }
+}
+.p-career__list {
+  margin-top: clamp(4rem, 5vw, 5rem);
+}
+.p-career__item {
+  font-size: clamp(1.4rem, 1.6vw, 1.6rem);
+  line-height: 1.8;
+}
+
+.p-Orthodontics {
+  margin: clamp(4rem, 8vw, 8rem) auto 0;
+  width: 100%;
+}
+.p-Orthodontics__inner {
+  display: block;
+  margin: 0 auto;
+  max-width: 100rem;
+  width: 100%;
+}
+.p-Orthodontics__costTable {
+  border: 0.1rem solid var(--gray);
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+.p-Orthodontics__costTable th,
+.p-Orthodontics__costTable td {
+  border: 0.1rem solid var(--gray);
+  font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+  line-height: 1.5;
+  padding: clamp(1rem, 2vw, 2rem) clamp(1rem, 2vw, 3rem);
+  text-align: start;
+  vertical-align: middle;
+}
+
 .u-displayNone {
   display: none;
 }
@@ -996,7 +1210,15 @@ a {
   }
 }
 
-.u-sectionPadding {
+.u-sectionPadding, .u-sectionPadding--large {
   padding-bottom: clamp(6rem, 12vw, 12rem);
   padding-top: clamp(6rem, 12vw, 12rem);
+}
+.u-sectionPadding--large {
+  padding-bottom: clamp(8rem, 14vw, 14rem);
+  padding-top: clamp(8rem, 14vw, 14rem);
+}
+
+.u-marginTop {
+  margin-top: clamp(2.4rem, 4vw, 4rem);
 }
