@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -24,6 +23,7 @@
 
     <title>大和市の歯医者ならかわさき歯科・矯正歯科</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet"  href="./css/style.css">
@@ -47,13 +47,11 @@
                     <p class="l-header__telOn">お問い合わせ・ご予約</p>
                     <p class="l-header__telText"><a href="tel:0120-918-418">T<span>EL</span>: 0120-918-418</a></p>
                 </div>
+                <div class="l-header__reserve">
+                    <a href="./reserve.html" class="l-header__reserveLink">WEB予約</a>
+                </div>
             </div>
             <div class="l-header__infoOnlySp u-displayNone--flexPB">
-                <div class="l-header__telItem">
-                    <a href="tel:0120-918-418" class="l-header__telItemLink">
-                        <img src="./img/top/call.png" alt="" width="60" height="60">
-                    </a>
-                </div>
                 <div class="p-drawer" role="dialog" aria-labelledby="drawer-logo">
                     <button class="p-drawer__toggle" aria-controls="drawer-menu" aria-expanded="false">
                         <span></span>
@@ -135,6 +133,16 @@
             </ul>
         </div>
     </nav>
+    <div class="l-menubar__contact u-displayNone--flexPB">
+        <a href="tel:0120-918-418" class="l-menubar__contactLink">
+            <i class="fa-solid fa-phone-volume" style="color: #ffffff;"></i>
+            <p class="l-menubar__contactText">電話する</p>
+        </a>
+        <a href="./reserve.html" target="_blank" rel="noopener" class="l-menubar__contactLink">
+            <i class="fa-solid fa-calendar-days" style="color: #ffffff;"></i>
+            <p class="l-menubar__contactText">Web予約</p>
+        </a>
+    </div>
 </header>
 
 <div class="l-mainVisual">
@@ -212,28 +220,36 @@
 <footer class="l-footer">
     <div class="l-footer__inner l-container">
         <div class="l-footer__nav">
-            <nav class="l-footer__menu">
-            <p class="l-footer__menuTitle">Clinic</p>
-                <ul class="l-footer__list">
-                    <li class="l-footer__item"><a href="./index.html" class="l-footer__link">●HOME</a></li>
-                    <li class="l-footer__item"><a href="./about.html" class="l-footer__link">●当院の特徴</a></li>
-                    <li class="l-footer__item"><a href="./doctor.html" class="l-footer__link">●ドクター紹介</a></li>
-                    <li class="l-footer__item"><a href="./general_dentistry.html" class="l-footer__link">●診療案内</a></li>
-                    <li class="l-footer__item"><a href="./access.html" class="l-footer__link">●診療時間・アクセス</a></li>
-                    <li class="l-footer__item"><a href="#" class="l-footer__link">●ブログ</a></li>
-                </ul>
-            </nav>
-            <nav class="l-footer__menu">
-            <p class="l-footer__menuTitle">MENU</p>
-                <ul class="l-footer__list">
-                    <li class="l-footer__item"><a href="./general_dentistry.html" class="l-footer__link">●一般歯科</a></li>
-                    <li class="l-footer__item"><a href="./Periodontal_disease.html" class="l-footer__link">●歯周病</a></li>
-                    <li class="l-footer__item"><a href="./Pediatric_dentistry.html" class="l-footer__link">●小児歯科</a></li>
-                    <li class="l-footer__item"><a href="./Orthodontics.html" class="l-footer__link">●矯正歯科</a></li>
-                    <li class="l-footer__item"><a href="./Cosmetic_dentistry.html" class="l-footer__link">●審美歯科</a></li>
-                    <li class="l-footer__item"><a href="./Preventive_dentistry.html" class="l-footer__link">●予防歯科</a></li>
-                </ul>
-            </nav>
+            <div class="l-footer__menuWrap">
+                <nav class="l-footer__menu">
+                    <p class="l-footer__menuTitle">Clinic</p>
+                    <ul class="l-footer__list">
+                        <li class="l-footer__item"><a href="./index.html" class="l-footer__link">●HOME</a></li>
+                        <li class="l-footer__item"><a href="./about.html" class="l-footer__link">●当院の特徴</a></li>
+                        <li class="l-footer__item"><a href="./doctor.html" class="l-footer__link">●ドクター紹介</a></li>
+                        <li class="l-footer__item"><a href="./general_dentistry.html" class="l-footer__link">●診療案内</a></li>
+                        <li class="l-footer__item"><a href="./access.html" class="l-footer__link">●診療時間・アクセス</a></li>
+                        <li class="l-footer__item"><a href="#" class="l-footer__link">●ブログ</a></li>
+                    </ul>
+                </nav>
+                <nav class="l-footer__menu">
+                    <p class="l-footer__menuTitle">MENU</p>
+                    <ul class="l-footer__list">
+                        <li class="l-footer__item"><a href="./general_dentistry.html" class="l-footer__link">●一般歯科</a></li>
+                        <li class="l-footer__item"><a href="./Periodontal_disease.html" class="l-footer__link">●歯周病</a></li>
+                        <li class="l-footer__item"><a href="./Pediatric_dentistry.html" class="l-footer__link">●小児歯科</a></li>
+                        <li class="l-footer__item"><a href="./Orthodontics.html" class="l-footer__link">●矯正歯科</a></li>
+                        <li class="l-footer__item"><a href="./Cosmetic_dentistry.html" class="l-footer__link">●審美歯科</a></li>
+                        <li class="l-footer__item"><a href="./Preventive_dentistry.html" class="l-footer__link">●予防歯科</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="l-footer__contactBox">
+                <a href="tel:0120-918-418" class="l-footer__contactTel">0120-918-418</a>
+                <div class="l-header__reserve">
+                    <a href="./reserve.html" class="l-header__reserveLink">WEB予約</a>
+                </div>
+            </div>
         </div>
         <div class="l-footer__info">
             <div class="l-footer__logo">
