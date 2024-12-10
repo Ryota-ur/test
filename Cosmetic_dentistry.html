@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -24,6 +23,7 @@
 
     <title>大和市の歯医者ならかわさき歯科・矯正歯科</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet"  href="./css/style.css">
@@ -47,13 +47,11 @@
                     <p class="l-header__telOn">お問い合わせ・ご予約</p>
                     <p class="l-header__telText"><a href="tel:0120-918-418">T<span>EL</span>: 0120-918-418</a></p>
                 </div>
+                <div class="l-header__reserve">
+                    <a href="./reserve.html" class="l-header__reserveLink">WEB予約</a>
+                </div>
             </div>
             <div class="l-header__infoOnlySp u-displayNone--flexPB">
-                <div class="l-header__telItem">
-                    <a href="tel:0120-918-418" class="l-header__telItemLink">
-                        <img src="./img/top/call.png" alt="" width="60" height="60">
-                    </a>
-                </div>
                 <div class="p-drawer" role="dialog" aria-labelledby="drawer-logo">
                     <button class="p-drawer__toggle" aria-controls="drawer-menu" aria-expanded="false">
                         <span></span>
@@ -135,6 +133,16 @@
             </ul>
         </div>
     </nav>
+    <div class="l-menubar__contact u-displayNone--flexPB">
+        <a href="tel:0120-918-418" class="l-menubar__contactLink">
+            <i class="fa-solid fa-phone-volume" style="color: #ffffff;"></i>
+            <p class="l-menubar__contactText">電話する</p>
+        </a>
+        <a href="./reserve.html" target="_blank" rel="noopener" class="l-menubar__contactLink">
+            <i class="fa-solid fa-calendar-days" style="color: #ffffff;"></i>
+            <p class="l-menubar__contactText">Web予約</p>
+        </a>
+    </div>
 </header>
 
 <div class="l-mainVisual">
@@ -164,50 +172,112 @@
             </div>
             <div class="p-section__parts">
                 <div class="p-section__content--large">
-                    <h4 class="p-section__tertiaryHeading">（セラミック）</h4>
-                    <p class="p-section__text">セラミックは陶器の一種です。白く透明感があり、天然歯の中にあっても目立ちにくいのが特長です。また、銀歯と比べて変形や汚れの付着などの心配が少なく、もし汚れても歯磨きで落としやすい特長があります。審美面にも機能面にも優れた素材です。</p>
+                    <h4 class="p-section__tertiaryHeading">◆メタルボンド 93,500円</h4>
+                    <p class="p-section__text">素材 内側：金属 / 外側：セラミック</p>
+                    <div class="p-section__listWrap">
+                        <h4 class="p-section__tertiaryHeading--mbNone">（メリット）</h4>
+                        <ul class="p-section__list">
+                            <li class="p-section__item--mtNone"><p>・強度が非常に高い</p></li>
+                            <li class="p-section__item--mtNone"><p>・保険診療の被せ物と比較すると見た目がよい</p></li>
+                            <li class="p-section__item--mtNone"><p>・セラミック治療としては費用が安い</p></li>
+                            <li class="p-section__item--mtNone"><p>・エビデンスが蓄積されている</p></li>
+                        </ul>
+                    </div>
+                    <div class="p-section__listWrap">
+                        <h4 class="p-section__tertiaryHeading--mbNone">（デメリット）</h4>
+                        <ul class="p-section__list">
+                            <li class="p-section__item--mtNone"><p>・金属アレルギーのリスクがある</p></li>
+                            <li class="p-section__item--mtNone"><p>・他のセラミックと比べて審美性が劣る</p></li>
+                            <li class="p-section__item--mtNone"><p>・噛み合う天然歯を傷つける可能性がある</p></li>
+                            <li class="p-section__item--mtNone"><p>・歯茎が変色することがある</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-section__img--small">
+                    <img src="./img/審美歯科/メタルボンド.png" alt="">
+                </div>
+            </div>
+            <div class="p-section__parts">
+                <div class="p-section__content--large">
+                    <h4 class="p-section__tertiaryHeading">◆オールセラミッククラウン 132,000円</h4>
+                    <p class="p-section__text">素材 100%セラミック（陶器）</p>
+                    <div class="p-section__listWrap">
+                        <h4 class="p-section__tertiaryHeading--mbNone">（メリット）</h4>
+                        <ul class="p-section__list">
+                            <li class="p-section__item--mtNone"><p>・自然な見た目</p></li>
+                            <li class="p-section__item--mtNone"><p>・高い生体適合性</p></li>
+                            <li class="p-section__item--mtNone"><p>・強度が高く、耐久性に優れる</p></li>
+                            <li class="p-section__item--mtNone"><p>・清掃性が優れる</p></li>
+                            <li class="p-section__item--mtNone"><p>・再治療になりにくい</p></li>
+                        </ul>
+                    </div>
+                    <div class="p-section__listWrap">
+                        <h4 class="p-section__tertiaryHeading--mbNone">（デメリット）</h4>
+                        <ul class="p-section__list">
+                            <li class="p-section__item--mtNone"><p>・治療費が高額</p></li>
+                            <li class="p-section__item--mtNone"><p>・ゆがむ力に弱い</p></li>
+                            <li class="p-section__item--mtNone"><p>・特定の状況下で割れることがある</p></li>
+                            <li class="p-section__item--mtNone"><p>・透明度が低い場合がある</p></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="p-section__img--small">
                     <img src="./img/審美歯科/セラミック.jpg" alt="">
                 </div>
             </div>
             <div class="p-section__parts">
-                <div class="p-section__content--block">
-                    <h3 class="p-section__subHeading--large">■セラミックの種類</h3>
-                    <p class="p-section__text">使用する場所によって適する強度が異なる為、オールセラミックとジルコニアを使い分けます。オールセラミックは陶器でできています。割れやすいので制作時に厚みが必要ですが、色や質感が天然歯に似ていため、自然な美しい白さを得られます。また、変色の心配も少ないです。ジルコニアは、宝石や人工ダイヤとしても使われる鉱石の一種です。とても硬いので、一度装着すると外すのが大変ですが、その分耐久性があります。こちらも美しい白さを保つことができます。</p>
+                <div class="p-section__content--large">
+                    <h4 class="p-section__tertiaryHeading">◆ハイブリッド</h4>
+                    <p class="p-section__text">・ハイブリッドインレー 大臼歯:39,600円 小臼歯:28,600円<br>・ハイブリッドクラウン 大臼歯・前歯:66,000円 小臼歯:60,500円</p>
+                    <p class="p-section__text--mtSmall">素材 セラミックとプラスチックを混ぜ合わせた素材</p>
+                    <div class="p-section__listWrap">
+                        <h4 class="p-section__tertiaryHeading--mbNone">（メリット）</h4>
+                        <ul class="p-section__list">
+                            <li class="p-section__item--mtNone"><p>・透明感があり自然の歯に近い</p></li>
+                            <li class="p-section__item--mtNone"><p>・変色・劣化しにくい</p></li>
+                            <li class="p-section__item--mtNone"><p>・金属アレルギーの心配がない</p></li>
+                            <li class="p-section__item--mtNone"><p>・適合性がすぐれている</p></li>
+
+                        </ul>
+                    </div>
+                    <div class="p-section__listWrap">
+                        <h4 class="p-section__tertiaryHeading--mbNone">（デメリット）</h4>
+                        <ul class="p-section__list">
+                            <li class="p-section__item--mtNone"><p>・セラミックに比べ透明感や光沢は劣る</p></li>
+                            <li class="p-section__item--mtNone"><p>・セラミックに比べると変色しやすい</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-section__img--small">
+                    <img src="./img/審美歯科/オールセラミッククラウン.jpg" alt="">
                 </div>
             </div>
             <div class="p-section__parts">
-                <div class="p-section__content--block">
-                    <h3 class="p-section__subHeading--large">セラミックのメリット・デメリット</h3>
-                    <h4 class="p-section__tertiaryHeading">（メリット）</h4>
-                   <ul class="p-section__list">
-                    <li class="p-section__item">
-                        <p>●審美性が高い</p>
-                        <p>歯周病を発症すると、以下の症状が出ると言われています。歯周病の症状が出ていないか、ご自身で確かめてみてください。</p>
-                    </li>
-                    <li class="p-section__item">
-                        <p>●二次むし歯を予防</p>
-                        <p>むし歯治療で銀の合金をかぶせた場合、時間が経つと銀の部分が劣化して剥がれ、歯との間に隙間が生じ、細菌の侵入を許すことにつながります。そして、そこからむし歯が再発＝二次むし歯となります。 一方、セラミックは歯にかぶせた部分の接着が強固で経年変化を起こしにくく、また表面がスムーズでプラークも着きにくいことから、二次むし歯は予防可能です。</p>
-                    </li>
-                    <li class="p-section__item">
-                        <p>●長持ちする素材</p>
-                        <p>一般に寿命が5年程度とされる銀歯に比べれば、寿命が10年以上というセラミックは長持ちする素材といえます。しかも、オールセラミックの場合はさらに長持ちするので、劣化による変色もなく、美しさが持続します。
-                        </p>
-                    </li>
-                    <li class="p-section__item">
-                        <p>●金属アレルギーフリー</p>
-                        <p>金属アレルギーのある方は、アレルギー発症の危険性があるので銀を含む合金は使用できません。一方、セラミックは陶製なので、金属アレルギーの方でも使用できます。ただし、同じセラミックの仲間でも、メタルボンドは一部に金属を使用しているので、金属アレルギーの方には使用しません。 
-                        </p>
-                    </li>
-                   </ul>
-                   <h4 class="p-section__tertiaryHeading u-marginTop">（デメリット）</h4>
-                   <ul class="p-section__list">
-                        <li class="p-section__item">
-                            <p>●費用が高額</p>
-                            <p>銀歯は健康保険内での治療が可能ですが、セラミックは保険適用外の素材なので、自費治療で高額になります。なお、ハイブリッドセラミックには一部保険が適用される場合がありますが、従来のハイブリッドセラミックとは違うタイプのものになります。</p>
-                        </li>
-                    </ul>
+                <div class="p-section__content--large">
+                    <h4 class="p-section__tertiaryHeading">◆ゴールド</h4>
+                    <p class="p-section__text">・ゴールドインレー 大臼歯:49,500円 小臼歯:38,500円<br>・ゴールドクラウン 大臼歯:99,000円 小臼歯:77,000円</p>
+                    <p class="p-section__text--mtSmall">素材 金合金</p>
+                    <div class="p-section__listWrap">
+                        <h4 class="p-section__tertiaryHeading--mbNone">（メリット）</h4>
+                        <ul class="p-section__list">
+                            <li class="p-section__item--mtNone"><p>・錆びにくい（貴金属のため物性が安定しているため）</p></li>
+                            <li class="p-section__item--mtNone"><p>・金属アレルギーになりにくい</p></li>
+                            <li class="p-section__item--mtNone"><p>・歯肉が変色しにくい</p></li>
+                            <li class="p-section__item--mtNone"><p>・二次虫歯になりにくい</p></li>
+                            <li class="p-section__item--mtNone"><p>・歯が割れにくい（保険の金属よりも柔らかく、硬すぎないため強度もある）</p></li>
+
+                        </ul>
+                    </div>
+                    <div class="p-section__listWrap">
+                        <h4 class="p-section__tertiaryHeading--mbNone">（デメリット）</h4>
+                        <ul class="p-section__list">
+                            <li class="p-section__item--mtNone"><p>・審美性に劣る</p></li>
+                            <li class="p-section__item--mtNone"><p>・すり減りやすい</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-section__img--small">
+                    <img src="./img/審美歯科/ゴールドインレー.jpg" alt="">
                 </div>
             </div>
             <div class="p-section__parts">
@@ -234,28 +304,36 @@
 <footer class="l-footer">
     <div class="l-footer__inner l-container">
         <div class="l-footer__nav">
-            <nav class="l-footer__menu">
-            <p class="l-footer__menuTitle">Clinic</p>
-                <ul class="l-footer__list">
-                    <li class="l-footer__item"><a href="./index.html" class="l-footer__link">●HOME</a></li>
-                    <li class="l-footer__item"><a href="./about.html" class="l-footer__link">●当院の特徴</a></li>
-                    <li class="l-footer__item"><a href="./doctor.html" class="l-footer__link">●ドクター紹介</a></li>
-                    <li class="l-footer__item"><a href="./general_dentistry.html" class="l-footer__link">●診療案内</a></li>
-                    <li class="l-footer__item"><a href="./access.html" class="l-footer__link">●診療時間・アクセス</a></li>
-                    <li class="l-footer__item"><a href="#" class="l-footer__link">●ブログ</a></li>
-                </ul>
-            </nav>
-            <nav class="l-footer__menu">
-            <p class="l-footer__menuTitle">MENU</p>
-                <ul class="l-footer__list">
-                    <li class="l-footer__item"><a href="./general_dentistry.html" class="l-footer__link">●一般歯科</a></li>
-                    <li class="l-footer__item"><a href="./Periodontal_disease.html" class="l-footer__link">●歯周病</a></li>
-                    <li class="l-footer__item"><a href="./Pediatric_dentistry.html" class="l-footer__link">●小児歯科</a></li>
-                    <li class="l-footer__item"><a href="./Orthodontics.html" class="l-footer__link">●矯正歯科</a></li>
-                    <li class="l-footer__item"><a href="./Cosmetic_dentistry.html" class="l-footer__link">●審美歯科</a></li>
-                    <li class="l-footer__item"><a href="./Preventive_dentistry.html" class="l-footer__link">●予防歯科</a></li>
-                </ul>
-            </nav>
+            <div class="l-footer__menuWrap">
+                <nav class="l-footer__menu">
+                    <p class="l-footer__menuTitle">Clinic</p>
+                    <ul class="l-footer__list">
+                        <li class="l-footer__item"><a href="./index.html" class="l-footer__link">●HOME</a></li>
+                        <li class="l-footer__item"><a href="./about.html" class="l-footer__link">●当院の特徴</a></li>
+                        <li class="l-footer__item"><a href="./doctor.html" class="l-footer__link">●ドクター紹介</a></li>
+                        <li class="l-footer__item"><a href="./general_dentistry.html" class="l-footer__link">●診療案内</a></li>
+                        <li class="l-footer__item"><a href="./access.html" class="l-footer__link">●診療時間・アクセス</a></li>
+                        <li class="l-footer__item"><a href="#" class="l-footer__link">●ブログ</a></li>
+                    </ul>
+                </nav>
+                <nav class="l-footer__menu">
+                    <p class="l-footer__menuTitle">MENU</p>
+                    <ul class="l-footer__list">
+                        <li class="l-footer__item"><a href="./general_dentistry.html" class="l-footer__link">●一般歯科</a></li>
+                        <li class="l-footer__item"><a href="./Periodontal_disease.html" class="l-footer__link">●歯周病</a></li>
+                        <li class="l-footer__item"><a href="./Pediatric_dentistry.html" class="l-footer__link">●小児歯科</a></li>
+                        <li class="l-footer__item"><a href="./Orthodontics.html" class="l-footer__link">●矯正歯科</a></li>
+                        <li class="l-footer__item"><a href="./Cosmetic_dentistry.html" class="l-footer__link">●審美歯科</a></li>
+                        <li class="l-footer__item"><a href="./Preventive_dentistry.html" class="l-footer__link">●予防歯科</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="l-footer__contactBox">
+                <a href="tel:0120-918-418" class="l-footer__contactTel">0120-918-418</a>
+                <div class="l-header__reserve">
+                    <a href="./reserve.html" class="l-header__reserveLink">WEB予約</a>
+                </div>
+            </div>
         </div>
         <div class="l-footer__info">
             <div class="l-footer__logo">
