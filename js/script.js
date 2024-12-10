@@ -119,5 +119,21 @@ document.querySelectorAll('.p-drawer__linkToggle').forEach(function (toggleLink)
 });
 
 
+document.querySelector('.p-contact__form').addEventListener('submit', function (event) {
+    const email = document.getElementById('your-email').value.trim();
+    const confirmEmail = document.getElementById('confirm-email').value.trim();
+
+    if (email !== confirmEmail) {
+        event.preventDefault(); // フォーム送信を防ぐ
+        alert('メールアドレスが一致しません。再確認してください。');
+    }
+});
+
+
+document.querySelector('.p-contact__formBtn--reset').addEventListener('click', function () {
+    const form = document.querySelector('.p-contact__form');
+    form.reset(); // フォームのリセット
+    alert('フォームがリセットされました');
+});
 
 
