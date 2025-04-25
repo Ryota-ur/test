@@ -87,6 +87,7 @@ a {
   --red:#FF0000;
   --whiteblue:#def7fa;
   --green:#03A093;
+  --lightgreen:#00C300;
   --mincho: "Hiragino Mincho ProN", YuMincho, serif;
   --gothic: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3","メイリオ", "Meiryo", sans-serif;
 }
@@ -129,7 +130,7 @@ a {
 }
 .l-footer__inner {
   display: flex;
-  gap: clamp(6rem, 8vw, 12rem);
+  gap: clamp(4rem, 6vw, 12rem);
   justify-content: center;
   padding: clamp(6rem, 8vw, 8rem) clamp(2rem, 4vw, 4rem);
 }
@@ -139,14 +140,9 @@ a {
   }
 }
 .l-footer__nav {
-  display: block;
-}
-@media (max-width: 766px) {
-  .l-footer__nav {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 .l-footer__menuWrap {
   display: flex;
@@ -184,6 +180,13 @@ a {
   gap: 2rem;
   margin-top: 4rem;
   padding: clamp(1rem, 1.2vw, 1.2rem) clamp(1.5rem, 1.8vw, 1.8rem);
+}
+@media (max-width: 992px) {
+  .l-footer__contactBox {
+    align-items: center;
+    flex-direction: column;
+    padding: clamp(2rem, 2vw, 2.4rem) clamp(1.5rem, 1.8vw, 1.8rem);
+  }
 }
 .l-footer__contactTel {
   align-items: center;
@@ -249,8 +252,8 @@ a {
   margin: 0 auto;
   max-width: 144rem;
   padding-bottom: clamp(1rem, 1.2vw, 2rem);
-  padding-left: clamp(1rem, 2.4vw, 4rem);
-  padding-right: clamp(1rem, 2.4vw, 4rem);
+  padding-left: clamp(1rem, 1.6vw, 4rem);
+  padding-right: clamp(1rem, 1.6vw, 4rem);
   padding-top: clamp(1rem, 1.2vw, 2rem);
   width: 100%;
 }
@@ -273,10 +276,10 @@ a {
 .l-header__infoWrap {
   align-items: center;
   display: flex;
-  gap: 2rem;
+  gap: 1.6rem;
 }
 .l-header__access {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 .l-header__address {
   padding-top: 1rem;
@@ -290,7 +293,7 @@ a {
 }
 .l-header__telText {
   color: var(--turquoise);
-  font-size: clamp(2rem, 2.4vw, 3rem);
+  font-size: clamp(2rem, 2vw, 2.4rem);
   padding-top: 1rem;
 }
 .l-header__telText span {
@@ -298,30 +301,50 @@ a {
 }
 .l-header__reserve {
   display: flex;
+  gap: 1rem;
 }
-.l-header__reserveLink {
+.l-header__reserveWeb, .l-header__reserveLine {
   align-items: center;
-  background: var(--turquoise);
   border-radius: 0.4rem;
   color: var(--white);
-  display: inline-flex;
-  font-size: clamp(1.4rem, 1.6vw, 1.6rem);
-  max-width: 30rem;
-  padding: 1.5rem clamp(2rem, 3vw, 3rem);
-  padding-left: 5rem;
+  display: flex;
+  flex-grow: 1;
+  font-size: clamp(1.2rem, 1.4vw, 1.4rem);
+  justify-content: right;
+  max-width: 15rem;
+  min-width: 11rem;
+  padding: 1.5rem 1rem;
   position: relative;
   transition: all 0.3s;
-  width: 100%;
 }
-.l-header__reserveLink::before {
-  background: url(../img/top/icon_mail.svg) no-repeat;
+.l-header__reserveWeb {
+  background: var(--turquoise);
+}
+.l-header__reserveWeb::before {
+  background: url(../img/top/icon_mail.svg) no-repeat center;
+  background-size: contain;
   content: "";
   height: 2rem;
-  left: 2rem;
+  left: 1rem;
   position: absolute;
   width: 2rem;
 }
-.l-header__reserveLink:hover {
+.l-header__reserveWeb:hover {
+  opacity: 0.7;
+}
+.l-header__reserveLine {
+  background: var(--lightgreen);
+}
+.l-header__reserveLine::before {
+  background: url(../img/top/icon_line.svg) no-repeat center;
+  background-size: contain;
+  content: "";
+  height: 3.5rem;
+  left: 0rem;
+  position: absolute;
+  width: 3.5rem;
+}
+.l-header__reserveLine:hover {
   opacity: 0.7;
 }
 .l-header__infoOnlySp {
@@ -437,6 +460,7 @@ a {
 .l-menubar__contactLink {
   align-items: center;
   background: var(--turquoise);
+  border-right: 0.1rem solid var(--white);
   display: flex;
   gap: 2rem;
   height: 4.5rem;
@@ -445,11 +469,12 @@ a {
   transition: all 0.3s;
   width: 100%;
 }
-.l-menubar__contactLink:first-of-type {
-  border-right: 0.1rem solid var(--white);
+.l-menubar__contactLink:last-of-type {
+  border-right: none;
 }
 .l-menubar__contactLink .fa-solid.fa-phone-volume,
-.l-menubar__contactLink .fa-solid.fa-calendar-days {
+.l-menubar__contactLink .fa-solid.fa-calendar-days,
+.l-menubar__contactLink .fa-brands.fa-line {
   font-size: 2rem;
 }
 .l-menubar__contactLink:hover {
@@ -457,8 +482,13 @@ a {
 }
 .l-menubar__contactText {
   color: var(--white);
-  font-size: clamp(1.4rem, 1.6vw, 1.6rem);
+  font-size: clamp(1.2rem, 1.2vw, 1.6rem);
   font-weight: bold;
+}
+@media (max-width: 375px) {
+  .l-menubar__contactText {
+    display: none;
+  }
 }
 
 .l-mainVisual {
